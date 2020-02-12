@@ -6,4 +6,8 @@ const sequelize = new Sequelize('poasarticle', 'root', 'root', {
   dialect: 'mysql'
 });
 
+sequelize.sync({
+  force: true
+});
+
 module.exports = sequelize;
