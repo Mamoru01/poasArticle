@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const Paper = require('../public/models/Paper');
+const VSTU = require('../public/javascripts/PaperLoader');
 
-router.get('/all',(req, res, next) => {
+router.get('/all',(req, res) => {
     Paper.findAll().then(result => {
         res.json(result);
     }).catch(error => {
@@ -12,10 +13,10 @@ router.get('/all',(req, res, next) => {
     })
 });
 
-router.get("/id/:id", (req, res, next) => {
+router.get("/id/:id", (req, res) => {
     Paper.findOne((req.params.id > 0) ? { where: { id: req.params.id } } : {})
         .then(task => {
-            if (task === null) throw new Error('Wrong Id')
+            if (task === null) throw new Error('Wrong Id');
             res.json(task);
         })
         .catch(error => {
@@ -24,14 +25,14 @@ router.get("/id/:id", (req, res, next) => {
         })
 });
 
-router.post("/new", (req, res, next) => {
+router.post("/new", (req, res) => {
     const {title, source,year, authors, link,  expert_opinion, state_expert_opinion, comment, expert_opinion_owner} = req.body;
     Paper.create({title, source, year, authors, link, expert_opinion, state_expert_opinion, comment, expert_opinion_owner}).then(Paper => {
         res.json(Paper);
     })
 });
 
-router.put("/update", (req, res, next)=> {
+router.put("/update", (req, res)=> {
     const {id, title, source, authors, link, year, expert_opinion, state_expert_opinion, comment, expert_opinion_owner} = req.body;
     Paper.update(
         {
@@ -59,12 +60,14 @@ router.delete("/delete/:id", (req,res) => {
        }
    }).then( rowDeleted  => {
        if (rowDeleted  === 1)
-           res.json({rowDeleted: 1})
+           res.json({rowDeleted: 1});
        else throw new Error("No ok!");
    } ).catch( e => {
        console.error(e);
    })
 
 });
+
+router.get("/start", (req, res) => {VSTU.getPaperL(); res.json({status:"ok"})});
 
 module.exports = router;

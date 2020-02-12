@@ -21,7 +21,6 @@ const savePaper = (paperJson) => {
                     link: p["link"],
                     year: p["year"],
                     source: p["source"],
-                    state: "G",
                     expert_opinion: null,
                     state_expert_opinion: "N"
                 };
@@ -36,7 +35,7 @@ const savePaper = (paperJson) => {
 };
 
 
-const getPaper = () => {
+getPaper = () => {
     const callback_func = (error, response) => {
         const handler = new htmlparser.DefaultHandler(function (error, dom) {
             let jsonObj;
@@ -58,6 +57,8 @@ const getPaper = () => {
     };
     vstuReq.req(callback_func);
 };
+
+module.exports.getPaperL = () => {getPaper();};
 
 module.exports.startLoader = () =>{
     setInterval(getPaper, 1000*24*60*60);

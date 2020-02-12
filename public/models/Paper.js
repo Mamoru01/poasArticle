@@ -32,7 +32,7 @@ Paper = sequelize.define('paper', {
         },
         comment: {
             type: Sequelize.TEXT,
-            allowNull: false
+            allowNull: true
         },
         year:{
             type: Sequelize.INTEGER,
