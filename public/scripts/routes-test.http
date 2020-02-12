@@ -7,7 +7,9 @@ content-type: application/json
   "authors": "Authors1 , authors 2, authors3",
   "year": 2019,
   "state": "P",
-  "state_expert_opinion": "G"
+  "state_expert_opinion": "G",
+  "comment": "Что делает он?",
+  "expert_opinion_owner": "Кузнецовва"
 }
 
 ###
@@ -29,10 +31,19 @@ content-type: application/json
   "source": "Source1U",
   "authors": "Authors1U , authors 2U, authors3U",
   "year": 2019,
-  "state": "U",
   "state_expert_opinion": "U",
   "expert_opinion": "photo",
-  "link":"link"
+  "link":"link",
+  "comment": "Что делает он?",
+  "expert_opinion_owner": "Кузнецовва"
 }
+###
+
+DELETE http://localhost:3000/paper/delete/1 HTTP/1.1
+
+###
+
+GET http://localhost:3000/expert-opinion-template/all HTTP/1.1
+content-type: application/json
 
 ###

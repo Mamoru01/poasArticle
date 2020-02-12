@@ -1,3 +1,359 @@
+GET http://localhost:3000/paper/all
+
+<> 2020-02-12T015544.200.json
+
+###
+
+DELETE http://localhost:3000/paper/delete/1
+
+<> 2020-02-12T015538.200.json
+
+###
+
+PUT http://localhost:3000/paper/update
+content-type: application/json
+
+{
+  "id": 1,
+  "title": "Title1U",
+  "source": "Source1U",
+  "authors": "Authors1U , authors 2U, authors3U",
+  "year": 2019,
+  "state_expert_opinion": "U",
+  "expert_opinion": "photo",
+  "link":"link",
+  "comment": "Что делает он?",
+  "expert_opinion_owner": "Кузнецовва"
+}
+
+<> 2020-02-12T015532.200.json
+
+###
+
+GET http://localhost:3000/paper/id/1
+
+<> 2020-02-12T015526.200.json
+
+###
+
+GET http://localhost:3000/paper/all
+
+<> 2020-02-12T015523.200.json
+
+###
+
+POST http://localhost:3000/paper/new
+content-type: application/json
+
+{
+  "title": "Title1",
+  "source": "Source1",
+  "authors": "Authors1 , authors 2, authors3",
+  "year": 2019,
+  "state": "P",
+  "state_expert_opinion": "G",
+  "comment": "Что делает он?",
+  "expert_opinion_owner": "Кузнецовва"
+}
+
+<> 2020-02-12T015515.200.json
+
+###
+
+POST http://localhost:3000/paper/new
+content-type: application/json
+
+{
+  "title": "Title1",
+  "source": "Source1",
+  "authors": "Authors1 , authors 2, authors3",
+  "year": 2019,
+  "state": "P",
+  "state_expert_opinion": "G",
+  "comment": "Что делает он?",
+  "expert_opinion_owner": "Кузнецовва"
+}
+
+###
+
+DELETE http://localhost:3000/paper/delete/1
+
+###
+
+DELETE http://localhost:3000/paper/1
+
+<> 2020-02-12T015217.404.html
+
+###
+
+PUT http://localhost:3000/paper/update
+content-type: application/json
+
+{
+  "id": 1,
+  "title": "Title1U",
+  "source": "Source1U",
+  "authors": "Authors1U , authors 2U, authors3U",
+  "year": 2019,
+  "state_expert_opinion": "U",
+  "expert_opinion": "photo",
+  "link":"link",
+  "comment": "Что делает он?",
+  "expert_opinion_owner": "Кузнецовва"
+}
+
+<> 2020-02-12T015208.200.json
+
+###
+
+GET http://localhost:3000/paper/id/1
+
+<> 2020-02-12T015205.200.json
+
+###
+
+GET http://localhost:3000/paper/all
+
+<> 2020-02-12T015203.200.json
+
+###
+
+POST http://localhost:3000/paper/new
+content-type: application/json
+
+{
+  "title": "Title1",
+  "source": "Source1",
+  "authors": "Authors1 , authors 2, authors3",
+  "year": 2019,
+  "state": "P",
+  "state_expert_opinion": "G",
+  "comment": "Что делает он?",
+  "expert_opinion_owner": "Кузнецовва"
+}
+
+<> 2020-02-12T015200.200.json
+
+###
+
+GET http://localhost:3000/expert-opinion-template/all
+content-type: application/json
+
+<> 2020-02-12T014244.200.json
+
+###
+
+GET http://localhost:3000/paper/all
+
+<> 2020-02-12T014235.200.json
+
+###
+
+PUT http://localhost:3000/paper/update
+content-type: application/json
+
+{
+  "id": 1,
+  "title": "Title1U",
+  "source": "Source1U",
+  "authors": "Authors1U , authors 2U, authors3U",
+  "year": 2019,
+  "state_expert_opinion": "U",
+  "expert_opinion": "photo",
+  "link":"link",
+  "comment": "Что делает он?",
+  "expert_opinion_owner": "Кузнецовва"
+}
+
+<> 2020-02-12T014232.200.json
+
+###
+
+GET http://localhost:3000/paper/id/1
+
+<> 2020-02-12T014229.200.json
+
+###
+
+GET http://localhost:3000/paper/all
+
+<> 2020-02-12T014227.200.json
+
+###
+
+POST http://localhost:3000/paper/new
+content-type: application/json
+
+{
+  "title": "Title1",
+  "source": "Source1",
+  "authors": "Authors1 , authors 2, authors3",
+  "year": 2019,
+  "state": "P",
+  "state_expert_opinion": "G",
+  "comment": "Что делает он?",
+  "expert_opinion_owner": "Кузнецовва"
+}
+
+<> 2020-02-12T014225.200.json
+
+###
+
+PUT http://localhost:3000/paper/update
+content-type: application/json
+
+{
+  "id": 1,
+  "title": "Title1U",
+  "source": "Source1U",
+  "authors": "Authors1U , authors 2U, authors3U",
+  "year": 2019,
+  "state": "U",
+  "state_expert_opinion": "U",
+  "expert_opinion": "photo",
+  "link":"link",
+  "comment": "Что делает он?",
+  "expert_opinion_owner": "Кузнецовва"
+}
+
+<> 2020-02-12T014150.500.html
+
+###
+
+GET http://localhost:3000/paper/id/1
+
+<> 2020-02-12T014146.200.json
+
+###
+
+GET http://localhost:3000/paper/all
+
+<> 2020-02-12T014142.200.json
+
+###
+
+POST http://localhost:3000/paper/new
+content-type: application/json
+
+{
+  "title": "Title1",
+  "source": "Source1",
+  "authors": "Authors1 , authors 2, authors3",
+  "year": 2019,
+  "state": "P",
+  "state_expert_opinion": "G",
+  "comment": "Что делает он?",
+  "expert_opinion_owner": "Кузнецовва"
+}
+
+<> 2020-02-12T014138.200.json
+
+###
+
+GET http://localhost:3000/paper/all
+
+<> 2020-02-12T014130.200.json
+
+###
+
+GET http://localhost:3000/paper/all
+
+<> 2020-02-12T014124.200.json
+
+###
+
+POST http://localhost:3000/paper/new
+content-type: application/json
+
+{
+  "title": "Title1",
+  "source": "Source1",
+  "authors": "Authors1 , authors 2, authors3",
+  "year": 2019,
+  "state": "P",
+  "state_expert_opinion": "G",
+  "comment": "Что делает он?",
+  "expert_opinion_owner": "Кузнецовва"
+}
+
+<> 2020-02-12T014113.200.json
+
+###
+
+POST http://localhost:3000/paper/new
+content-type: application/json
+
+{
+  "title": "Title1",
+  "source": "Source1",
+  "authors": "Authors1 , authors 2, authors3",
+  "year": 2019,
+  "state": "P",
+  "state_expert_opinion": "G",
+  "comment": "Что делает он?",
+  "expert_opinion_owner": "Кузнецовва"
+}
+
+<> 2020-02-12T014056.500.html
+
+###
+
+GET http://localhost:3000/expert-opinion-template/all
+content-type: application/json
+
+<> 2020-02-12T012028.200.json
+
+###
+
+GET http://localhost:3000/expert-opinion-template/all
+content-type: application/json
+
+<> 2020-02-12T012001.200.json
+
+###
+
+GET http://localhost:3000/expert-opinion-template/all
+content-type: application/json
+
+<> 2020-02-12T011930.200.json
+
+###
+
+GET http://localhost:3000/expert-opinion-template/all
+content-type: application/json
+
+<> 2020-02-12T011913.200.json
+
+###
+
+GET http://localhost:3000/expert-opinion-template/all
+content-type: application/json
+
+<> 2020-02-12T011840.200.json
+
+###
+
+GET http://localhost:3000/expert-opinion-template/all
+content-type: application/json
+
+<> 2020-02-12T011836.200.json
+
+###
+
+GET http://localhost:3000/expert-opinion-template/all
+content-type: application/json
+
+<> 2020-02-12T011822.200.json
+
+###
+
+GET http://localhost:3000/expert-opinion-template/all
+content-type: application/json
+
+<> 2020-02-12T011800.503.html
+
+###
+
 PUT http://localhost:3000/paper/update
 content-type: application/json
 

@@ -7,7 +7,7 @@ const sequelize = new Sequelize('poasarticle', 'root', 'root', {
 });
 
 sequelize.sync({
-  force: false
+  force: true
 });
 
 module.exports = sequelize;
