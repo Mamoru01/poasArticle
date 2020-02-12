@@ -4,19 +4,19 @@ const sequelize = require('./db');
 Paper = sequelize.define('paper', {
 
     title: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: false
     },
     source: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: false
     },
     authors: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: false
     },
     link: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: true
     },
     state: {
@@ -24,7 +24,7 @@ Paper = sequelize.define('paper', {
         allowNull: false
     },
     expert_opinion: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: true
     },
     state_expert_opinion: {
@@ -37,8 +37,7 @@ Paper = sequelize.define('paper', {
     }
 }, {
     sequelize,
-    modelName: 'paper',
-    timestamps: false
+    modelName: 'paper'
 });
 
 module.exports = Paper;
