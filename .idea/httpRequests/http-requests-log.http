@@ -1,3 +1,79 @@
+GET http://localhost:3000/paper/start
+
+<> 2020-02-12T070401.200.json
+
+###
+
+GET http://localhost:3000/expert-opinion-template/all
+
+<> 2020-02-12T070347.200.json
+
+###
+
+DELETE http://localhost:3000/expert-opinion-template/delete/1
+
+<> 2020-02-12T070345.200.json
+
+###
+
+GET http://localhost:3000/expert-opinion-template/all
+
+<> 2020-02-12T070334.200.json
+
+###
+
+PUT http://localhost:3000/expert-opinion-template/update
+content-type: application/json
+
+{
+  "id": 1,
+  "filePath": "Linkkkkkkkkkkkkkkkkk",
+  "numberProtocolBegin": 0,
+  "numberProtocolEnd": 8
+}
+
+<> 2020-02-12T070327.200.json
+
+###
+
+GET http://localhost:3000/expert-opinion-template/id/1
+
+<> 2020-02-12T070311.200.json
+
+###
+
+GET http://localhost:3000/expert-opinion-template/all
+
+<> 2020-02-12T070309.200.json
+
+###
+
+POST http://localhost:3000/expert-opinion-template/new
+content-type: application/json
+
+{
+  "filePath": "Link",
+  "numberProtocolBegin": 0,
+  "numberProtocolEnd": 4
+}
+
+<> 2020-02-12T070306.200.json
+
+###
+
+POST http://localhost:3000/expert-opinion-template/new
+content-type: application/json
+
+{
+  "filePath": "Link",
+  "numberProtocolBegin": 0,
+  "numberProtocolEnd": 4
+}
+
+<> 2020-02-12T070301.200.json
+
+###
+
 DELETE http://localhost:3000/paper/delete/1
 
 <> 2020-02-12T023058.200.json
@@ -436,84 +512,6 @@ GET http://localhost:3000/expert-opinion-template/all
 content-type: application/json
 
 <> 2020-02-12T011840.200.json
-
-###
-
-GET http://localhost:3000/expert-opinion-template/all
-content-type: application/json
-
-<> 2020-02-12T011836.200.json
-
-###
-
-GET http://localhost:3000/expert-opinion-template/all
-content-type: application/json
-
-<> 2020-02-12T011822.200.json
-
-###
-
-GET http://localhost:3000/expert-opinion-template/all
-content-type: application/json
-
-<> 2020-02-12T011800.503.html
-
-###
-
-PUT http://localhost:3000/paper/update
-content-type: application/json
-
-{
-  "id": 1,
-  "title": "Title1U",
-  "source": "Source1U",
-  "authors": "Authors1U , authors 2U, authors3U",
-  "year": 2019,
-  "state": "U",
-  "state_expert_opinion": "U",
-  "expert_opinion": "photo",
-  "link":"link"
-}
-
-<> 2020-02-12T114525.200.json
-
-###
-
-GET http://localhost:3000/paper/id/1
-
-<> 2020-02-12T114519.200.json
-
-###
-
-GET http://localhost:3000/paper/all
-
-<> 2020-02-12T114511.200.json
-
-###
-
-POST http://localhost:3000/paper/new
-content-type: application/json
-
-{
-  "title": "Title1",
-  "source": "Source1",
-  "authors": "Authors1 , authors 2, authors3",
-  "year": 2019,
-  "state": "P",
-  "state_expert_opinion": "G"
-}
-
-<> 2020-02-12T114459.200.json
-
-###
-
-GET http://localhost:3000/paper/all
-
-###
-
-GET http://localhost:3000/paper/all
-
-<> 2020-02-11T071250.200.json
 
 ###
 

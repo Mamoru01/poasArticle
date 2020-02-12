@@ -1,3 +1,9 @@
+### Принудительная синхраниязация бд с сервером
+
+GET http://localhost:3000/paper/start HTTP/1.1
+
+###
+
 POST http://localhost:3000/paper/new HTTP/1.1
 content-type: application/json
 
@@ -43,7 +49,36 @@ DELETE http://localhost:3000/paper/delete/1 HTTP/1.1
 
 ###
 
-GET http://localhost:3000/expert-opinion-template/all HTTP/1.1
+POST http://localhost:3000/expert-opinion-template/new HTTP/1.1
 content-type: application/json
+
+{
+  "filePath": "Link",
+  "numberProtocolBegin": 0,
+  "numberProtocolEnd": 4
+}
+
+###
+
+GET http://localhost:3000/expert-opinion-template/all HTTP/1.1
+
+###
+
+GET http://localhost:3000/expert-opinion-template/id/1 HTTP/1.1
+
+###
+
+PUT http://localhost:3000/expert-opinion-template/update HTTP/1.1
+content-type: application/json
+
+{
+  "id": 1,
+  "filePath": "Linkkkkkkkkkkkkkkkkk",
+  "numberProtocolBegin": 0,
+  "numberProtocolEnd": 8
+}
+###
+
+DELETE http://localhost:3000/expert-opinion-template/delete/1 HTTP/1.1
 
 ###

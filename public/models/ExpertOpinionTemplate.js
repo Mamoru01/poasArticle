@@ -6,14 +6,15 @@ ExpertOpinionTemplate = sequelize.define('Expert_Opinion_Template', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    NumberProtocol:{
+    numberProtocolBegin:{
         type: Sequelize.INTEGER,
         allowNull: false
     },
-    year:{
-        type: Sequelize.DATE,
-        allowNull: false
+    numberProtocolEnd:{
+        type: Sequelize.INTEGER,
+        allowNull: true
     }
+
 }, {
     sequelize,
     modelName: 'Expert_Opinion_Template'
