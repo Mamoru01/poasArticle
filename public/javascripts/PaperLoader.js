@@ -22,7 +22,8 @@ const savePaper = (paperJson) => {
                     year: p["year"],
                     source: p["source"],
                     expert_opinion: null,
-                    state_expert_opinion: "N"
+                    state_expert_opinion: "N",
+                    state_export_opinion: "N"
                 };
                 Paper.create(newP).then(Paper => {
                     console.table(Paper);

@@ -12,10 +12,10 @@ content-type: application/json
   "source": "Source1",
   "authors": "Authors1 , authors 2, authors3",
   "year": 2019,
-  "state": "P",
   "state_expert_opinion": "G",
+  "state_export_opinion": "G",
   "comment": "Что делает он?",
-  "expert_opinion_owner": "Кузнецовва"
+  "owner": "Кузнецовва"
 }
 
 ###
@@ -37,11 +37,13 @@ content-type: application/json
   "source": "Source1U",
   "authors": "Authors1U , authors 2U, authors3U",
   "year": 2019,
-  "state_expert_opinion": "U",
+  "state_expert_opinion": "G1",
+  "state_export_opinion": "G1",
   "expert_opinion": "photo",
+  "export_opinion": "photo",
   "link":"link",
   "comment": "Что делает он?",
-  "expert_opinion_owner": "Кузнецовва"
+  "owner": "Кузнецовва"
 }
 ###
 
@@ -55,7 +57,8 @@ content-type: application/json
 {
   "filePath": "Link",
   "numberProtocolBegin": 0,
-  "numberProtocolEnd": 4
+  "numberProtocolEnd": 4,
+  "year": 2020
 }
 
 ###
@@ -75,10 +78,47 @@ content-type: application/json
   "id": 1,
   "filePath": "Linkkkkkkkkkkkkkkkkk",
   "numberProtocolBegin": 0,
-  "numberProtocolEnd": 8
+  "numberProtocolEnd": 8,
+  "year": 2019
 }
 ###
 
 DELETE http://localhost:3000/expert-opinion-template/delete/1 HTTP/1.1
+
+###
+
+POST http://localhost:3000/protocol-template/new HTTP/1.1
+content-type: application/json
+
+{
+  "filePath": "Link",
+  "numberProtocolBegin": 0,
+  "numberProtocolEnd": 4,
+  "year": 2020
+}
+
+###
+
+GET http://localhost:3000/protocol-template/all HTTP/1.1
+
+###
+
+GET http://localhost:3000/protocol-template/id/1 HTTP/1.1
+
+###
+
+PUT http://localhost:3000/protocol-template/update HTTP/1.1
+content-type: application/json
+
+{
+  "id": 1,
+  "filePath": "Linkkkkkkkkkkkkkkkkk",
+  "numberProtocolBegin": 0,
+  "numberProtocolEnd": 8,
+  "year": 2019
+}
+###
+
+DELETE http://localhost:3000/protocol-template/delete/1 HTTP/1.1
 
 ###

@@ -26,14 +26,14 @@ router.get("/id/:id", (req, res) => {
 });
 
 router.post("/new", (req, res) => {
-    const {title, source,year, authors, link,  expert_opinion, state_expert_opinion, comment, expert_opinion_owner} = req.body;
-    Paper.create({title, source, year, authors, link, expert_opinion, state_expert_opinion, comment, expert_opinion_owner}).then(Paper => {
+    const {title, source,year, authors, link,  expert_opinion, state_expert_opinion, comment, owner, export_opinion, state_export_opinion} = req.body;
+    Paper.create({title, source, year, authors, link, expert_opinion, state_expert_opinion, export_opinion, state_export_opinion, comment, owner}).then(Paper => {
         res.json(Paper);
     })
 });
 
 router.put("/update", (req, res)=> {
-    const {id, title, source, authors, link, year, expert_opinion, state_expert_opinion, comment, expert_opinion_owner} = req.body;
+    const {id, title, source, authors, link, year, expert_opinion, state_expert_opinion, export_opinion, state_export_opinion, comment, owner} = req.body;
     Paper.update(
         {
             title: title,
@@ -43,8 +43,10 @@ router.put("/update", (req, res)=> {
             year: year,
             expert_opinion: expert_opinion,
             state_expert_opinion: state_expert_opinion,
+            export_opinion: export_opinion,
+            state_export_opinion: state_export_opinion,
             comment: comment,
-            expert_opinion_owner: expert_opinion_owner
+            owner: owner
         },
         { where: { id: id } }
     ).then(result =>

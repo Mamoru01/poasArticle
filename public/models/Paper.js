@@ -22,9 +22,17 @@ Paper = sequelize.define('paper', {
             type: Sequelize.TEXT,
             allowNull: true
         },
-        expert_opinion_owner:{
+        export_opinion: {
+            type: Sequelize.TEXT,
+            allowNull: true
+        },
+        owner:{
             type: Sequelize.STRING,
             allowNull: true
+        },
+        state_export_opinion: {
+            type: Sequelize.STRING,
+            allowNull: false
         },
         state_expert_opinion: {
             type: Sequelize.STRING,

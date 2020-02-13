@@ -1,7 +1,7 @@
 const Sequelize= require('sequelize');
 const sequelize = require('./db');
 
-ExpertOpinionTemplate = sequelize.define('Expert_Opinion_Template', {
+ProtocolTemplate = sequelize.define('Protocol_Template', {
     filePath: {
         type: Sequelize.STRING,
         allowNull: false
@@ -21,7 +21,7 @@ ExpertOpinionTemplate = sequelize.define('Expert_Opinion_Template', {
 
 }, {
     sequelize,
-    modelName: 'Expert_Opinion_Template'
+    modelName: 'Protocol_Template'
 });
 
-module.exports = ExpertOpinionTemplate;
+module.exports = ProtocolTemplate;

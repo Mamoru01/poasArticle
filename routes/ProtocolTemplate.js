@@ -1,9 +1,9 @@
-const ExpertOpinionTemplate = require('../public/models/ExpertOpinionTemplate');
+const ProtocolTemplate = require('../public/models/ProtocolTemplate');
 const express = require('express');
 const router = express.Router();
 
 router.get('/all', (req, res) => {
-    ExpertOpinionTemplate.findAll()
+    ProtocolTemplate.findAll()
         .then(tmps => {
             if (tmps === null) throw new Error("Empty");
             res.json(tmps)
@@ -13,7 +13,7 @@ router.get('/all', (req, res) => {
 });
 
 router.get('/id/:id', (req, res) => {
-    ExpertOpinionTemplate.findOne((req.params.id > 0) ? { where: { id: req.params.id } } : {})
+    ProtocolTemplate.findOne((req.params.id > 0) ? { where: { id: req.params.id } } : {})
         .then(task => {
             if (task === null) throw new Error('Wrong Id');
             res.json(task);
@@ -25,15 +25,15 @@ router.get('/id/:id', (req, res) => {
 });
 
 router.post("/new", (req, res)=>{
-    const {filePath, numberProtocolBegin,numberProtocolEnd, year} = req.body;
-    ExpertOpinionTemplate.create({filePath, numberProtocolBegin,numberProtocolEnd, year}).then(ExpertOpinionTemplate => {
+    const {filePath, numberProtocolBegin,numberProtocolEnd,year} = req.body;
+    ProtocolTemplate.create({filePath, numberProtocolBegin,numberProtocolEnd, year}).then(ExpertOpinionTemplate => {
         res.json(ExpertOpinionTemplate);
     })
 });
 
 router.put("/update", (req, res)=>{
     const {id,filePath, numberProtocolBegin,numberProtocolEnd, year} = req.body;
-    ExpertOpinionTemplate.update(
+    ProtocolTemplate.update(
         {
             filePath: filePath,
             numberProtocolBegin: numberProtocolBegin,
@@ -48,7 +48,7 @@ router.put("/update", (req, res)=>{
 
 router.delete("/delete/:id", (req, res)=>{
     let id = req.params.id;
-    ExpertOpinionTemplate.destroy({
+    ProtocolTemplate.destroy({
         where: {
             id:id
         }
